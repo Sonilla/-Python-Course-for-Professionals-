@@ -1,3 +1,31 @@
+№ 12 
+
+def spell(*args: tuple):
+    '''
+    Принимает произвольное количество позиционных аргументов-слов и возвращает словарь, ключи которого 
+    — первые буквы слов, а значения — максимальные длины слов на эту букву.
+    '''
+    res = dict()
+    for word in args:
+        key = word[0].lower()
+        res[key] = max(res.get(key, 0), len(word))
+    return res
+
+№ 13    # Гениальное решения Дмитрия Бойко
+
+def choose_plural(amount: int, declensions: tuple):
+    if str(amount).endswith(('0', '5', '6', '7', '8', '9', '11', '12', '13', '14')):
+        return f'{amount} {declensions[2]}'
+    elif str(amount).endswith('1'):
+        return f'{amount} {declensions[0]}'
+    else:
+        return f'{amount} {declensions[1]}'
+
+
+
+
+№ 14
+
 def get_biggest(numbers):
     if numbers:
         m = max(numbers)
