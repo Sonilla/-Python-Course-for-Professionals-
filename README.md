@@ -1,2 +1,2 @@
-# -Python-Course-for-Professionals-
+# Course-for-Professionals
 Generation Python Course for Professionals 
