@@ -1,0 +1,14 @@
+def get_biggest(numbers):
+    if numbers:
+        m = max(numbers)
+        numbers.sort(reverse=True, key=lambda x: str(x) * m)
+        number = int(''.join(map(str, numbers))) 
+        return number
+    return -1
+
+# находим длину самого длинного числа в списке
+# сортируем список, по убыванию, через key=lambda x: str(x) * 1й пункт
+# склеиваем все элементы списка
+# выводим как число
+
+
